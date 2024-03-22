@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Danh sách phim</title>
+  </head>
+  <body>
+    <header class="bg-white py-4 shadow-sm sticky-top">
+      <!-- logo  -->
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex">
+          <span class="fw-bolder fs-3 text-first">Cinema</span>
+          <div class="d-flex align-items-start">
+            <span class="fw-medium text-danger text-sm">Star</span>
+            <i class="ri-star-fill text-xs text-third"></i>
+          </div>
+        </div>
+        <ul
+          class="list-unstyled d-flex column-gap-5 text-dark fw-bold align-items-center mb-0"
+        >
+          <li class="menu-item text-dark">Mua vé</li>
+          <li class="menu-item">Phim <i class="ri-arrow-down-s-line"></i></li>
+          <li class="menu-item position-relative">
+            Góc điện ảnh <i class="ri-arrow-down-s-line"></i>
+            <ul
+              class="position-absolute menu-list top-100 start-0 bg-white list-unstyled text-dark rounded-1 border border-1"
+              style="width: 300px"
+            >
+              <li class="menu-list-item">Thể loại phim</li>
+              <li class="menu-list-item">Diễn viên</li>
+              <li class="menu-list-item">Đạo diễn</li>
+              <li class="menu-list-item">Bình luận phim</li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            Sự kiện <i class="ri-arrow-down-s-line"></i>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center column-gap-2">
+          <div class="input-group border-1 border rounded-1">
+            <input
+              type="text"
+              class="form-control border-0 text-sm"
+              placeholder="Tìm kiếm"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+            <span
+              class="input-group-text border-0 bg-transparent"
+              id="basic-addon1"
+              style="cursor: pointer"
+              ><i class="ri-search-line"></i
+            ></span>
+          </div>
+
+          <button class="bg-transparent border-0 text-sm text-dark">
+            Đăng nhập
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- main  -->
+    <main class="mt-4">
+      <!-- PHIM CHIẾU TRONG TUẦN  -->
+      <div class="container">
+        <!-- Phim chiếu trong tuần  -->
+        <h4
+          class="text-dark border-4 border-start border-dark px-2 fw-bold mb-4"
+        >
+          Thể loại phim
+        </h4>
+        <div class="row g-4">
+          <div class="col-12 col-lg-8 col-xl-9">
+            <div
+              class="d-flex align-items-center column-gap-2 mb-3"
+              style="width: 450px"
+            >
+              <select
+                class="form-select form-select-lg text-sm text-dark"
+                aria-label="Large select example"
+              >
+                <option selected>Năm sản xuất</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <select
+                class="form-select form-select-lg text-sm text-dark"
+                aria-label="Large select example"
+              >
+                <option selected>Thể loại</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <select
+                class="form-select form-select-lg text-sm text-dark"
+                aria-label="Large select example"
+              >
+                <option selected>Quốc gia</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+
+            <div class="d-flex row-gap-3 flex-column">
+              <!-- ITEM THE LOAI PHIM  -->
+              <div class="row gx-3">
+                <div class="col-5 col-lg-4 col-xl-3">
+                  <img
+                    src="./assets/img/imgphim-2.jpg"
+                    alt=""
+                    style="
+                      width: 100%;
+                      height: 300px;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                    class="rounded-3"
+                  />
+                </div>
+                <div class="col-7 col-lg-8 col-xl-9">
+                  <h4 class="fw-bold text-dark">Kungfu Panda 4</h4>
+                  <div class="d-flex column-gap-3 mb-2">
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-thumb-up-fill"></i>
+                      25
+                    </div>
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-eye-fill"></i>
+                      200
+                    </div>
+                  </div>
+                  <p class="text-sm text-light">
+                    Cú búng tay của Thanos đã khiến toàn bộ dân số biến mất một
+                    nửa. Các siêu anh hùng đánh mất bạn bè, người thân và đánh
+                    mất cả chính mình. Bộ sáu Avengers đầu tiên tứ tán. Iron Man
+                    kẹt lại ngoài không gian, Hawkeye mất tích. Thor, Captain
+                    America, Hulk và Blac
+                  </p>
+                </div>
+              </div>
+              <div class="row gx-3">
+                <div class="col-5 col-lg-4 col-xl-3">
+                  <img
+                    src="./assets/img/imgphim1.jpg"
+                    alt=""
+                    style="
+                      width: 100%;
+                      height: 300px;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                    class="rounded-3"
+                  />
+                </div>
+                <div class="col-7 col-lg-8 col-xl-9">
+                  <h4 class="fw-bold text-dark">Quật mộ trùng ma</h4>
+                  <div class="d-flex column-gap-3 mb-2">
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-thumb-up-fill"></i>
+                      25
+                    </div>
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-eye-fill"></i>
+                      200
+                    </div>
+                  </div>
+                  <p class="text-sm text-light">
+                    Cú búng tay của Thanos đã khiến toàn bộ dân số biến mất một
+                    nửa. Các siêu anh hùng đánh mất bạn bè, người thân và đánh
+                    mất cả chính mình. Bộ sáu Avengers đầu tiên tứ tán. Iron Man
+                    kẹt lại ngoài không gian, Hawkeye mất tích. Thor, Captain
+                    America, Hulk và Blac
+                  </p>
+                </div>
+              </div>
+              <div class="row gx-3">
+                <div class="col-5 col-lg-4 col-xl-3">
+                  <img
+                    src="./assets/img/imgphim3.jpg"
+                    alt=""
+                    style="
+                      width: 100%;
+                      height: 300px;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                    class="rounded-3"
+                  />
+                </div>
+                <div class="col-7 col-lg-8 col-xl-9">
+                  <h4 class="fw-bold text-dark">
+                    Dune: Hành tinh cát - Phần 2
+                  </h4>
+                  <div class="d-flex column-gap-3 mb-2">
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-thumb-up-fill"></i>
+                      25
+                    </div>
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-eye-fill"></i>
+                      200
+                    </div>
+                  </div>
+                  <p class="text-sm text-light">
+                    Cú búng tay của Thanos đã khiến toàn bộ dân số biến mất một
+                    nửa. Các siêu anh hùng đánh mất bạn bè, người thân và đánh
+                    mất cả chính mình. Bộ sáu Avengers đầu tiên tứ tán. Iron Man
+                    kẹt lại ngoài không gian, Hawkeye mất tích. Thor, Captain
+                    America, Hulk và Blac
+                  </p>
+                </div>
+              </div>
+              <div class="row gx-3">
+                <div class="col-5 col-lg-4 col-xl-3">
+                  <img
+                    src="./assets/img/imgphim4.jpg"
+                    alt=""
+                    style="
+                      width: 100%;
+                      height: 300px;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                    class="rounded-3"
+                  />
+                </div>
+                <div class="col-7 col-lg-8 col-xl-9">
+                  <h4 class="fw-bold text-dark">Quý cô thừa kế 2</h4>
+                  <div class="d-flex column-gap-3 mb-2">
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-thumb-up-fill"></i>
+                      25
+                    </div>
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-eye-fill"></i>
+                      200
+                    </div>
+                  </div>
+                  <p class="text-sm text-light">
+                    Cú búng tay của Thanos đã khiến toàn bộ dân số biến mất một
+                    nửa. Các siêu anh hùng đánh mất bạn bè, người thân và đánh
+                    mất cả chính mình. Bộ sáu Avengers đầu tiên tứ tán. Iron Man
+                    kẹt lại ngoài không gian, Hawkeye mất tích. Thor, Captain
+                    America, Hulk và Blac
+                  </p>
+                </div>
+              </div>
+              <div class="row gx-3">
+                <div class="col-5 col-lg-4 col-xl-3">
+                  <img
+                    src="./assets/img/imgphim7.jpg"
+                    alt=""
+                    style="
+                      width: 100%;
+                      height: 300px;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                    class="rounded-3"
+                  />
+                </div>
+                <div class="col-7 col-lg-8 col-xl-9">
+                  <h4 class="fw-bold text-dark">Vong nữ đoạt hồn</h4>
+                  <div class="d-flex column-gap-3 mb-2">
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-thumb-up-fill"></i>
+                      25
+                    </div>
+                    <div
+                      class="d-flex align-items-center column-gap-1 text-first"
+                    >
+                      <i class="ri-eye-fill"></i>
+                      200
+                    </div>
+                  </div>
+                  <p class="text-sm text-light">
+                    Cú búng tay của Thanos đã khiến toàn bộ dân số biến mất một
+                    nửa. Các siêu anh hùng đánh mất bạn bè, người thân và đánh
+                    mất cả chính mình. Bộ sáu Avengers đầu tiên tứ tán. Iron Man
+                    kẹt lại ngoài không gian, Hawkeye mất tích. Thor, Captain
+                    America, Hulk và Blac
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-5 text-center d-flex align-items-center justify-content-center column-gap-2"
+            >
+              <button
+                class="border-1 border-first bg-transparent text-first d-flex align-items-center justify-content-center text-sm"
+                style="height: 30px; width: 30px; outline: none"
+              >
+                <i class="ri-arrow-left-s-line"></i>
+              </button>
+              <button
+                class="border-1 bg-first border-first bg-transparent text-white d-flex align-items-center justify-content-center text-sm"
+                style="height: 30px; width: 30px; outline: none"
+              >
+                1
+              </button>
+              <button
+                class="border-1 border-first bg-transparent text-first d-flex align-items-center justify-content-center text-sm"
+                style="height: 30px; width: 30px; outline: none"
+              >
+                2
+              </button>
+              <button
+                class="border-1 border-first bg-transparent text-first d-flex align-items-center justify-content-center text-sm"
+                style="height: 30px; width: 30px; outline: none"
+              >
+                3
+              </button>
+
+              <span>...</span>
+              <button
+                class="border-1 border-first bg-transparent text-first d-flex align-items-center justify-content-center text-sm"
+                style="height: 30px; width: 30px; outline: none"
+              >
+                7
+              </button>
+              <button
+                class="border-1 border-first bg-transparent text-first d-flex align-items-center justify-content-center text-sm"
+                style="height: 30px; width: 30px; outline: none"
+              >
+                8
+              </button>
+              <button
+                class="border-1 border-first bg-transparent text-first d-flex align-items-center justify-content-center text-sm"
+                style="height: 30px; width: 30px; outline: none"
+              >
+                9
+              </button>
+              <button
+                class="border-1 border-first bg-transparent text-first d-flex align-items-center justify-content-center text-sm"
+                style="height: 30px; width: 30px; outline: none"
+              >
+                <i class="ri-arrow-right-s-line"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-xl-3">
+            <div class="rounded-4 bg-white shadow-sm overflow-hidden mb-4">
+              <div class="p-3 d-flex flex-column row-gap-3">
+                <select
+                  class="form-select form-select-lg text-dark text-sm focus-ring focus-ring-info"
+                  aria-label="Default select example"
+                >
+                  <option selected>Chọn suất</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <select
+                  class="form-select form-select-lg text-dark text-sm focus-ring focus-ring-info"
+                  aria-label="Default select example"
+                >
+                  <option selected>Chọn phim</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <div>
+                  <h5 class="fs-6 text-dark">Chọn suất:</h5>
+                  <div class="d-flex flex-wrap gap-2">
+                    <div
+                      class="text-dark px-2 py-1 rounded-2 border bg-white fw-bold"
+                    >
+                      7:30
+                    </div>
+                    <div
+                      class="text-dark px-2 py-1 rounded-2 border bg-white fw-bold"
+                    >
+                      7:30
+                    </div>
+                    <div
+                      class="text-dark px-2 py-1 rounded-2 border bg-white fw-bold"
+                    >
+                      7:30
+                    </div>
+                    <div
+                      class="text-dark px-2 py-1 rounded-2 border bg-white fw-bold"
+                    >
+                      7:30
+                    </div>
+                    <div
+                      class="text-dark px-2 py-1 rounded-2 border bg-white fw-bold"
+                    >
+                      7:30
+                    </div>
+                    <div
+                      class="text-dark px-2 py-1 rounded-2 border bg-white fw-bold"
+                    >
+                      7:30
+                    </div>
+                    <div
+                      class="text-dark px-2 py-1 rounded-2 border bg-white fw-bold"
+                    >
+                      7:30
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="border-0 w-100 py-2 bg-first text-white">
+                Mua vé
+              </button>
+            </div>
+            <div>
+              <h4
+                class="text-first border-4 border-start border-first px-2 fw-bold mb-4"
+              >
+                Đang chiếu
+              </h4>
+              <div class="row row-gap-2">
+                <div
+                  class="product-item col-sm-6 col-md-4 col-lg-12"
+                  style="cursor: pointer"
+                >
+                  <div class="rounded-3 overflow-hidden mb-2 position-relative">
+                    <img
+                      src="./assets/img/imgphim-2.jpg"
+                      alt=""
+                      style="
+                        height: 400px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+
+                    <div
+                      class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                      style="
+                        width: 60px;
+                        top: 0;
+                        right: 0;
+                        border-bottom-left-radius: 10px;
+                      "
+                    >
+                      10 <i class="ri-star-fill"></i>
+                    </div>
+                    <div
+                      class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                      style="width: 100%; height: 100%"
+                    >
+                      <button class="btn btn-warning text-sm">
+                        <i class="ri-coupon-3-line"></i> Mua vé
+                      </button>
+                      <button class="btn btn-outline-info text-sm">
+                        <i class="ri-folder-video-line"></i> Trailer
+                      </button>
+                    </div>
+                  </div>
+                  <h4 class="fw-bold text-dark">Kungfu Panda 4</h4>
+                </div>
+                <!-- PHIM ITEM  -->
+                <div
+                  class="product-item col-sm-6 col-md-4 col-lg-12"
+                  style="cursor: pointer"
+                >
+                  <div class="rounded-3 overflow-hidden mb-2 position-relative">
+                    <img
+                      src="./assets/img/imgphim3.jpg"
+                      alt=""
+                      style="
+                        height: 400px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+
+                    <div
+                      class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                      style="
+                        width: 60px;
+                        top: 0;
+                        right: 0;
+                        border-bottom-left-radius: 10px;
+                      "
+                    >
+                      10 <i class="ri-star-fill"></i>
+                    </div>
+                    <div
+                      class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                      style="width: 100%; height: 100%"
+                    >
+                      <button class="btn btn-warning text-sm">
+                        <i class="ri-coupon-3-line"></i> Mua vé
+                      </button>
+                      <button class="btn btn-outline-info text-sm">
+                        <i class="ri-folder-video-line"></i> Trailer
+                      </button>
+                    </div>
+                  </div>
+                  <h4 class="fw-bold text-dark">
+                    Dune: Hành tinh cát - Phần 2
+                  </h4>
+                </div>
+                <!-- PHIM ITEM  -->
+                <div
+                  class="product-item col-sm-6 col-md-4 col-lg-12"
+                  style="cursor: pointer"
+                >
+                  <div class="rounded-3 overflow-hidden mb-2 position-relative">
+                    <img
+                      src="./assets/img/imgphim4.jpg"
+                      alt=""
+                      style="
+                        height: 400px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+
+                    <div
+                      class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                      style="
+                        width: 60px;
+                        top: 0;
+                        right: 0;
+                        border-bottom-left-radius: 10px;
+                      "
+                    >
+                      10 <i class="ri-star-fill"></i>
+                    </div>
+                    <div
+                      class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                      style="width: 100%; height: 100%"
+                    >
+                      <button class="btn btn-warning text-sm">
+                        <i class="ri-coupon-3-line"></i> Mua vé
+                      </button>
+                      <button class="btn btn-outline-info text-sm">
+                        <i class="ri-folder-video-line"></i> Trailer
+                      </button>
+                    </div>
+                  </div>
+                  <h4 class="fw-bold text-dark">Quý cô thừa kế</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 bg-dark-subtle my-5" style="height: 10px"></div>
+
+      <!-- Tin khuyến mãi  -->
+      <div class="container">
+        <h4
+          class="text-dark border-4 border-start border-dark px-2 fw-bold mb-4"
+        >
+          Tin khuyến mãi
+        </h4>
+
+        <!-- Content khuyến mãi  -->
+        <div>
+          <div
+            id="carouselPromotion"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="./assets/img/km2.jpg"
+                      alt=""
+                      class="rounded-3 mb-2"
+                      style="
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+                    <h4 class="text-dark fw-bold fs-5">
+                      Cinema Star ưu đải 50% bắp nước cho thành viên
+                    </h4>
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="./assets/img/km2.jpg"
+                      alt=""
+                      class="rounded-3 mb-2"
+                      style="
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+                    <h4 class="text-dark fw-bold fs-5">
+                      Cinema Star ưu đải 50% bắp nước cho thành viên
+                    </h4>
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="./assets/img/km2.jpg"
+                      alt=""
+                      class="rounded-3 mb-2"
+                      style="
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+                    <h4 class="text-dark fw-bold fs-5">
+                      Cinema Star ưu đải 50% bắp nước cho thành viên
+                    </h4>
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="./assets/img/km2.jpg"
+                      alt=""
+                      class="rounded-3 mb-2"
+                      style="
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+                    <h4 class="text-dark fw-bold fs-5">
+                      Cinema Star ưu đải 50% bắp nước cho thành viên
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="./assets/img/km1.jpg"
+                      alt=""
+                      class="rounded-3 mb-2"
+                      style="
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+                    <h4 class="text-dark fw-bold fs-5">
+                      Cinema Star ưu đải 50% bắp nước cho thành viên
+                    </h4>
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="./assets/img/km1.jpg"
+                      alt=""
+                      class="rounded-3 mb-2"
+                      style="
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+                    <h4 class="text-dark fw-bold fs-5">
+                      Cinema Star ưu đải 50% bắp nước cho thành viên
+                    </h4>
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="./assets/img/km1.jpg"
+                      alt=""
+                      class="rounded-3 mb-2"
+                      style="
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+                    <h4 class="text-dark fw-bold fs-5">
+                      Cinema Star ưu đải 50% bắp nước cho thành viên
+                    </h4>
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="./assets/img/km1.jpg"
+                      alt=""
+                      class="rounded-3 mb-2"
+                      style="
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      "
+                    />
+                    <h4 class="text-dark fw-bold fs-5">
+                      Cinema Star ưu đải 50% bắp nước cho thành viên
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev bg-opacity-50 bg-black p-2"
+              type="button"
+              data-bs-target="#carouselPromotion"
+              data-bs-slide="prev"
+              style="
+                height: fit-content;
+                width: fit-content;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+              "
+            >
+              <i class="ri-arrow-left-s-line fs-3"></i>
+            </button>
+            <button
+              class="carousel-control-next bg-opacity-50 bg-black p-2"
+              type="button"
+              data-bs-target="#carouselPromotion"
+              data-bs-slide="next"
+              style="
+                height: fit-content;
+                width: fit-content;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+              "
+            >
+              <i class="ri-arrow-right-s-line fs-3"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-5 bg-black bg-opacity-75">
+      <div class="container text-white">
+        <div class="row py-5">
+          <div class="col-3">
+            <h4 class="fs-5">Giới thiệu</h4>
+            <ul class="list-unstyled d-flex flex-column row-gap-2">
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Về chúng tôi</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Thoả thuẩn hoạt động</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Quy chế hoạt động</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Chính sách hoạt động</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h4 class="fs-5">Góc điện ảnh</h4>
+            <ul class="list-unstyled d-flex flex-column row-gap-2">
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Thể loại phim</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Diễn viên</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Blog điện ảnh</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Phim hay trong tuần</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h4 class="fs-5">Hỗ trợ</h4>
+            <ul class="list-unstyled d-flex flex-column row-gap-2">
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Vé/rạp phim</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Thanh toán</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Đặt vé xem</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  >Đăng kí thành viên</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h4 class="fs-5">Liên hệ</h4>
+            <ul class="list-unstyled d-flex flex-column row-gap-2">
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  ><i class="ri-phone-fill"></i> 0909.887.556</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-decoration-none fw-lighter text-sm"
+                  ><i class="ri-map-pin-line"></i> 45 Thành Thái, TP. Hồ Chí
+                  Minh</a
+                >
+              </li>
+              <li class="d-flex column-gap-4">
+                <i class="ri-facebook-box-fill fs-3"></i
+                ><i class="ri-twitter-fill fs-3"></i
+                ><i class="ri-instagram-fill fs-3"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="d-block text-center py-2 text-dark text-sm">
+      Dự án được thiết kế dựa trên Gallaxy Cinema
+    </div>
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
