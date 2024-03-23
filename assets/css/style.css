@@ -107,7 +107,7 @@ body {
 
 .menu-list-item:hover {
   background-color: #4fb0cf;
-  color: white;
+  color: white !important;
 }
 
 .grid-col-10 {
@@ -116,7 +116,7 @@ body {
 
 .info-item:hover {
   background-color: #4fb0cf;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .menu-link:hover {

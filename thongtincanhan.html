@@ -9,7 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
@@ -224,32 +227,909 @@
     <header class="bg-white py-4 shadow-sm sticky-top">
       <!-- logo  -->
       <div class="container d-flex justify-content-between align-items-center">
-        <div class="d-flex">
-          <span class="fw-bolder fs-3 text-first">Cinema</span>
-          <div class="d-flex align-items-start">
-            <span class="fw-medium text-danger text-sm">Star</span>
-            <i class="ri-star-fill text-xs text-third"></i>
-          </div>
+        <div>
+          <a href="index.html" class="text-decoration-none d-flex">
+            <span class="fw-bolder fs-3 text-first">Cinema</span>
+            <div class="d-flex align-items-start">
+              <span class="fw-medium text-danger text-sm">Star</span>
+              <i class="ri-star-fill text-xs text-third"></i>
+            </div>
+          </a>
         </div>
         <ul
-          class="list-unstyled d-flex column-gap-5 text-dark fw-bold align-items-center mb-0"
+          class="list-unstyled d-flex flex-xl-row column-gap-5 text-dark fw-bold align-items-center mb-0 flex-column bg-white menu"
         >
-          <li class="menu-item text-dark">Mua vé</li>
-          <li class="menu-item">Phim <i class="ri-arrow-down-s-line"></i></li>
+          <li
+            class="menu-item text-dark d-flex align-items-center column-gap-1"
+          >
+            <a
+              href="./muave.html"
+              class="text-decoration-none text-dark menu-link"
+              ><i class="ri-coupon-3-line"></i> Mua vé</a
+            >
+          </li>
+          <li class="menu-item position-relative">
+            Phim <i class="ri-arrow-down-s-line"></i>
+
+            <div
+              class="d-none d-xl-block z-3 position-absolute menu-list top-100 start-0 bg-white list-unstyled text-dark rounded-1 border border-1 overflow-hidden p-3"
+              style="width: 900px"
+            >
+              <div
+                id="carouselMenu"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <div class="row g-4">
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim7.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Quật mộ trùng ma</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim-2.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Kungfu Panda 4</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim3.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">
+                          Dune: Hành tinh cát - Phần 2
+                        </h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim4.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Quý cô thừa kế</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim5.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Bức hoạ bí ẩn</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim6.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Biệt đội săn rồng</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim7.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Vong nữ đoạt hồn</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim8.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Mai</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <div class="row g-4">
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim1.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Quật mộ trùng ma</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim-2.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Kungfu Panda 4</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim3.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">
+                          Dune: Hành tinh cát - Phần 2
+                        </h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim4.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Quý cô thừa kế</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim5.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Bức hoạ bí ẩn</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim6.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Biệt đội săn rồng</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim7.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Vong nữ đoạt hồn</h4>
+                      </div>
+                      <!-- PHIM ITEM  -->
+                      <div class="col-3 product-item" style="cursor: pointer">
+                        <div
+                          class="rounded-3 overflow-hidden mb-2 position-relative"
+                        >
+                          <img
+                            src="./assets/img/imgphim8.jpg"
+                            alt=""
+                            style="
+                              height: 300px;
+                              width: 100%;
+                              object-fit: cover;
+                              object-position: center;
+                            "
+                          />
+
+                          <div
+                            class="text-third bg-second position-absolute fs-6 opacity-75 py-2 d-flex align-items-center justify-content-center"
+                            style="
+                              width: 60px;
+                              top: 0;
+                              right: 0;
+                              border-bottom-left-radius: 10px;
+                            "
+                          >
+                            10 <i class="ri-star-fill"></i>
+                          </div>
+                          <div
+                            class="product-overlay position-absolute top-0 start-0 bg-black bg-opacity-50 d-flex align-items-center justify-content-center flex-column row-gap-2"
+                            style="width: 100%; height: 100%"
+                          >
+                            <a
+                              href="./muave.html"
+                              class="btn btn-warning text-sm"
+                            >
+                              <i class="ri-coupon-3-line"></i> Mua vé
+                            </a>
+                            <a
+                              href="./chitietphimdangchieu.html"
+                              class="btn btn-outline-info text-sm"
+                            >
+                              <i class="ri-folder-video-line"></i>
+                              Trailer
+                            </a>
+                          </div>
+                        </div>
+                        <h4 class="fw-bold fs-6">Mai</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev bg-opacity-50 bg-black p-2"
+                  type="button"
+                  data-bs-target="#carouselMenu"
+                  data-bs-slide="prev"
+                  style="
+                    height: fit-content;
+                    width: fit-content;
+                    top: 50%;
+                    transform: translateY(-50%);
+                  "
+                >
+                  <i class="ri-arrow-left-s-line fs-3"></i>
+                </button>
+                <button
+                  class="carousel-control-next bg-opacity-50 bg-black p-2"
+                  type="button"
+                  data-bs-target="#carouselMenu"
+                  data-bs-slide="next"
+                  style="
+                    height: fit-content;
+                    width: fit-content;
+                    top: 50%;
+                    transform: translateY(-50%);
+                  "
+                >
+                  <i class="ri-arrow-right-s-line fs-3"></i>
+                </button>
+              </div>
+            </div>
+          </li>
           <li class="menu-item position-relative">
             Góc điện ảnh <i class="ri-arrow-down-s-line"></i>
             <ul
-              class="position-absolute menu-list top-100 start-0 bg-white list-unstyled text-dark rounded-1 border border-1"
-              style="width: 300px"
+              class="position-absolute menu-list top-100 start-0 bg-white list-unstyled text-dark rounded-1 border border-1 overflow-hidden"
+              style="width: 250px"
             >
-              <li class="menu-list-item">Thể loại phim</li>
-              <li class="menu-list-item">Diễn viên</li>
-              <li class="menu-list-item">Đạo diễn</li>
-              <li class="menu-list-item">Bình luận phim</li>
+              <li>
+                <a
+                  href="./theloaiphim.html"
+                  class="menu-list-item text-decoration-none text-dark"
+                  >Thể loại phim</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./danhsachdienvien.html"
+                  class="menu-list-item text-decoration-none text-dark"
+                  >Diễn viên</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./danhsachdienvien.html"
+                  class="menu-list-item text-decoration-none text-dark"
+                  >Đạo diễn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./theloaiphim.html"
+                  class="menu-list-item text-decoration-none text-dark"
+                  >Bình luận phim</a
+                >
+              </li>
             </ul>
           </li>
-          <li class="menu-item">
+          <li class="menu-item position-relative">
             Sự kiện <i class="ri-arrow-down-s-line"></i>
+            <ul
+              class="position-absolute menu-list top-100 start-0 bg-white list-unstyled text-dark rounded-1 border border-1 overflow-hidden"
+              style="width: 250px"
+            >
+              <li>
+                <a
+                  href="./uudai.html"
+                  class="menu-list-item text-decoration-none text-dark"
+                  >Ưu đãi tháng</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./uudai.html"
+                  class="menu-list-item text-decoration-none text-dark"
+                  >Khuyến mãi tháng</a
+                >
+              </li>
+            </ul>
           </li>
         </ul>
         <div class="d-flex align-items-center column-gap-2">
@@ -325,20 +1205,34 @@
                   >
                 </div>
               </div>
-              <ul class="list-unstyled text-sm">
-                <li class="block py-2 px-3 info-item" style="cursor: pointer">
+              <div class="text-sm d-flex flex-column">
+                <a
+                  href="./lichsugiaodich.html"
+                  class="block py-2 px-3 info-item text-decoration-none text-dark"
+                  style="cursor: pointer"
+                >
                   Lịch sử giao dịch
-                </li>
-                <li class="block py-2 px-3 info-item" style="cursor: pointer">
+                </a>
+                <a
+                  href="./thongtincanhan.html"
+                  class="block py-2 px-3 info-item text-decoration-none text-dark"
+                  style="cursor: pointer"
+                >
                   Thông tin cá nhân
-                </li>
-                <li class="block py-2 px-3 info-item" style="cursor: pointer">
+                </a>
+                <a
+                  class="block py-2 px-3 info-item text-decoration-none text-dark"
+                  style="cursor: pointer"
+                >
                   Thông báo
-                </li>
-                <li class="block py-2 px-3 info-item" style="cursor: pointer">
+                </a>
+                <a
+                  class="block py-2 px-3 info-item text-decoration-none text-dark"
+                  style="cursor: pointer"
+                >
                   Khuyến mãi
-                </li>
-              </ul>
+                </a>
+              </div>
             </div>
           </div>
           <div class="col-12 col-lg-7 col-xl-8">
@@ -409,7 +1303,11 @@
                   </div>
                 </div>
                 <div>
-                    <button class="btn bg-first text-white text-sm ms-auto d-block">Cập nhật thông tin</button>
+                  <button
+                    class="btn bg-first text-white text-sm ms-auto d-block"
+                  >
+                    Cập nhật thông tin
+                  </button>
                 </div>
               </div>
             </div>
