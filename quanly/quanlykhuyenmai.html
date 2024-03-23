@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Quản trị viên</title>
+  </head>
+  <body style="height: 100vh" class="d-flex flex-column">
+    <!-- MODAL  -->
+    <div
+      class="modal fade"
+      id="modalRapphim"
+      tabindex="-1"
+      aria-labelledby="modalRapphim"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalRapphim">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="d-flex">
+        <div
+          style="width: 400px"
+          class="bg-white vh-100 d-flex flex-column shadow-sm"
+        >
+          <div
+            class="d-flex py-4 align-items-center justify-content-center mb-5 fw-bolder"
+          >
+            <span class="fw-bolder fs-3 text-first">Cinema</span>
+            <div class="d-flex align-items-start">
+              <span class="fw-medium text-danger text-sm">Star</span>
+              <i class="ri-star-fill text-xs text-third"></i>
+            </div>
+          </div>
+
+        <!-- Menu -->
+        <div class="d-flex flex-column">
+          <a
+            href="./quanlyrapphim.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-home-3-line"></i> Quản lý rạp phim</a
+          >
+
+          <a
+            href="./quanlyloaighe.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-menu-search-fill"></i> Quản lý loại ghế</a
+          >
+
+          <a
+            href="./quanlyghe.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-armchair-line"></i> Quản lý ghế</a
+          >
+
+          <a
+            href="./quanlyphongphim.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-store-line"></i> Quản lý phòng phim</a
+          >
+
+          <a
+            href="./quanlysuatchieu.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-clapperboard-fill"></i> Quản lý suất chiếu</a
+          >
+
+          <a
+            href="./quanlydienvien.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-user-3-fill"></i> Quản lý đạo diễn, diễn viên</a
+          >
+
+          <a
+            href="./quanlyphim.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-film-line"></i> Quản lý phim</a
+          >
+
+          <a
+            href="./quanlyhoadon.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-bill-line"></i> Quản lý hóa đơn</a
+          >
+
+          <a
+            href="./quanlytaikhoan.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-account-box-fill"></i> Quản lý tài khoản</a
+          >
+
+          <a
+            href="./quanlykhuyenmai.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-coupon-2-fill"></i> Quản lý khuyến mãi</a
+          >
+
+          <a
+            href="./quanlycombodoan.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-restaurant-line"></i> Quản lý thực phẩm/combo</a
+          >
+
+          <a
+            href="./quanlynhanvien.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-group-line"></i> Quản lý nhân viên</a
+          >
+
+          <a
+            href="./quanlythanhpho.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-building-line"></i> Quản lý thành phố</a
+          >
+
+          <a
+            href="./quanlythongke.html"
+            class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+            ><i class="ri-bar-chart-2-line"></i> Quản lý thống kê</a
+          >
+        </div>
+
+          <div class="flex-fill d-flex flex-column justify-content-end">
+            <a
+              href=""
+              class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+              ><i class="ri-settings-2-line"></i> Cài đặt</a
+            >
+
+            <a
+              href=""
+              class="d-block py-2 px-3 info-item text-dark text-sm text-decoration-none"
+              ><i class="ri-logout-box-line"></i> Đăng xuất</a
+            >
+          </div>
+        </div>
+
+        <div class="flex-fill">
+          <div
+            class="d-flex justify-content-between bg-white shadow-sm align-items-center px-3 py-3"
+          >
+            <div
+              class="input-group bg-white input-group-sm rounded-3 border overflow-hidden px-2"
+              style="width: 400px; height: fit-content"
+            >
+              <input
+                type="text"
+                class="form-control border-0"
+                placeholder="Tìm kiếm..."
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+              <span
+                class="input-group-text bg-transparent border-0"
+                id="basic-addon1"
+                ><i class="ri-search-line"></i
+              ></span>
+            </div>
+            <div class="d-flex align-items-center column-gap-5">
+              <div>
+                <div class="position-relative">
+                  <i class="ri-notification-line"></i>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  >
+                    99+
+                  </span>
+                </div>
+              </div>
+              <div class="d-flex column-gap-3 align-self-start">
+                <img
+                  src="../assets/img/dienvien1.jpg"
+                  class="rounded-circle"
+                  alt=""
+                  style="
+                    height: 40px;
+                    width: 40px;
+                    object-fit: cover;
+                    object-position: center;
+                  "
+                />
+                <div>
+                  <h5 class="fs-6 mb-0">Thành Trung</h5>
+                  <span class="text-sm">(Quản lý)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="py-2 px-3">
+            <h5 class="text-dark fs-6 my-3">Trang chủ / Quản lý khuyến mãi</h5>
+            <div class="rounded-3 overflow-hidden shadow-sm bg-white px-4 py-3">
+              <div class="d-flex justify-content-between">
+                <h5>Danh sách khuyến mãi</h5>
+                <div>
+                  <button
+                    class="btn bg-first btn-sm text-white"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalRapphim"
+                  >
+                    <i class="ri-file-add-line"></i> Thêm mới
+                  </button>
+                </div>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>
+                      <input type="checkbox" />
+                    </th>
+                    <th scope="col">#</th>
+                    <th scope="col">Mã khuyến mãi</th>
+                    <th scope="col">Tên khuyến mãi</th>
+                    <th scope="col">% Giảm</th>
+                    <th scope="col">Giảm trực tiếp</th>
+                    <th scope="col">Ngày áp dụng</th>
+                    <th scope="col">Ngày kết thúc</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-sm">
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>1</td>
+                    <td>KM0005</td>
+                    <td>Khuyến mãi 30/4</td>
+                    <td>5%</td>
+                    <td>300.000VNĐ</td>
+                    <td>23/04/2024</td>
+                    <td>23/04/2024</td>
+                    <td>
+                      <div class="d-flex column-gap-2">
+                        <i
+                          class="ri-delete-bin-6-line"
+                          style="cursor: pointer"
+                          title="Xóa"
+                        ></i
+                        ><i
+                          class="ri-error-warning-line"
+                          style="cursor: pointer"
+                          title="Xem chi tiết"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>1</td>
+                    <td>KM0005</td>
+                    <td>Khuyến mãi 30/4</td>
+                    <td>5%</td>
+                    <td>300.000VNĐ</td>
+                    <td>23/04/2024</td>
+                    <td>23/04/2024</td>
+                    <td>
+                      <div class="d-flex column-gap-2">
+                        <i
+                          class="ri-delete-bin-6-line"
+                          style="cursor: pointer"
+                          title="Xóa"
+                        ></i
+                        ><i
+                          class="ri-error-warning-line"
+                          style="cursor: pointer"
+                          title="Xem chi tiết"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>1</td>
+                    <td>KM0005</td>
+                    <td>Khuyến mãi 30/4</td>
+                    <td>5%</td>
+                    <td>300.000VNĐ</td>
+                    <td>23/04/2024</td>
+                    <td>23/04/2024</td>
+                    <td>
+                      <div class="d-flex column-gap-2">
+                        <i
+                          class="ri-delete-bin-6-line"
+                          style="cursor: pointer"
+                          title="Xóa"
+                        ></i
+                        ><i
+                          class="ri-error-warning-line"
+                          style="cursor: pointer"
+                          title="Xem chi tiết"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>1</td>
+                    <td>KM0005</td>
+                    <td>Khuyến mãi 30/4</td>
+                    <td>5%</td>
+                    <td>300.000VNĐ</td>
+                    <td>23/04/2024</td>
+                    <td>23/04/2024</td>
+                    <td>
+                      <div class="d-flex column-gap-2">
+                        <i
+                          class="ri-delete-bin-6-line"
+                          style="cursor: pointer"
+                          title="Xóa"
+                        ></i
+                        ><i
+                          class="ri-error-warning-line"
+                          style="cursor: pointer"
+                          title="Xem chi tiết"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>1</td>
+                    <td>KM0005</td>
+                    <td>Khuyến mãi 30/4</td>
+                    <td>5%</td>
+                    <td>300.000VNĐ</td>
+                    <td>23/04/2024</td>
+                    <td>23/04/2024</td>
+                    <td>
+                      <div class="d-flex column-gap-2">
+                        <i
+                          class="ri-delete-bin-6-line"
+                          style="cursor: pointer"
+                          title="Xóa"
+                        ></i
+                        ><i
+                          class="ri-error-warning-line"
+                          style="cursor: pointer"
+                          title="Xem chi tiết"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>1</td>
+                    <td>KM0005</td>
+                    <td>Khuyến mãi 30/4</td>
+                    <td>5%</td>
+                    <td>300.000VNĐ</td>
+                    <td>23/04/2024</td>
+                    <td>23/04/2024</td>
+                    <td>
+                      <div class="d-flex column-gap-2">
+                        <i
+                          class="ri-delete-bin-6-line"
+                          style="cursor: pointer"
+                          title="Xóa"
+                        ></i
+                        ><i
+                          class="ri-error-warning-line"
+                          style="cursor: pointer"
+                          title="Xem chi tiết"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>1</td>
+                    <td>KM0005</td>
+                    <td>Khuyến mãi 30/4</td>
+                    <td>5%</td>
+                    <td>300.000VNĐ</td>
+                    <td>23/04/2024</td>
+                    <td>23/04/2024</td>
+                    <td>
+                      <div class="d-flex column-gap-2">
+                        <i
+                          class="ri-delete-bin-6-line"
+                          style="cursor: pointer"
+                          title="Xóa"
+                        ></i
+                        ><i
+                          class="ri-error-warning-line"
+                          style="cursor: pointer"
+                          title="Xem chi tiết"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>1</td>
+                    <td>KM0005</td>
+                    <td>Khuyến mãi 30/4</td>
+                    <td>5%</td>
+                    <td>300.000VNĐ</td>
+                    <td>23/04/2024</td>
+                    <td>23/04/2024</td>
+                    <td>
+                      <div class="d-flex column-gap-2">
+                        <i
+                          class="ri-delete-bin-6-line"
+                          style="cursor: pointer"
+                          title="Xóa"
+                        ></i
+                        ><i
+                          class="ri-error-warning-line"
+                          style="cursor: pointer"
+                          title="Xem chi tiết"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>1</td>
+                    <td>KM0005</td>
+                    <td>Khuyến mãi 30/4</td>
+                    <td>5%</td>
+                    <td>300.000VNĐ</td>
+                    <td>23/04/2024</td>
+                    <td>23/04/2024</td>
+                    <td>
+                      <div class="d-flex column-gap-2">
+                        <i
+                          class="ri-delete-bin-6-line"
+                          style="cursor: pointer"
+                          title="Xóa"
+                        ></i
+                        ><i
+                          class="ri-error-warning-line"
+                          style="cursor: pointer"
+                          title="Xem chi tiết"
+                        ></i>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
