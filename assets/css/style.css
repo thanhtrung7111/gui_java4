@@ -76,11 +76,11 @@ body {
 
 ::-webkit-scrollbar {
   width: 6px;
-  background-color: #8a8a8a;
+  background-color: #f8f8f8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #454545;
+  background-color: #bfbfbf;
 }
 
 .scale-img:hover {
@@ -155,4 +155,19 @@ body {
     visibility: visible;
     border: 0 !important;
   } */
+}
+
+.translate-r-hover{
+  transition: transform .3s ease;
+  cursor: pointer;
+}
+
+.translate-r-hover:hover{
+  transform: translateX(.5rem);
+
+}
+
+
+.show-menu{
+  
 }
